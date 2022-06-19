@@ -1,13 +1,8 @@
 const mongoose = require('mongoose');
+const uri = "mongodb+srv://devanixsz:2gabkGS3VTlWrQrC@nixszdb.51d1v.mongodb.net/mstore?retryWrites=true&w=majority";
 
-const mongoUri="mongodb+srv://devanixsz:2gabkGS3VTlWrQrC@nixszdb.51d1v.mongodb.net/mstore?retryWrites=true&w=majority";
-mongoose.connect(mongoUri)
-
-.then(()=>{
-    console.log("connection succes");
-})
-.catch(err=>{
-    console.log(err);
+mongoose.connect(uri).then(value => {
+    console.log("connection to products atlas succes");
 });
 
 
